@@ -1,0 +1,5 @@
+terraform-service-account.json
+.terraform.lock.hcl
+terraform.tfstate
+.terraform
+.idea/
