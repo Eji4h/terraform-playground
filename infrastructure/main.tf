@@ -4,12 +4,23 @@ terraform {
       source  = "hashicorp/google"
       version = "3.73.0"
     }
+    cloudflare = {
+      source = "cloudflare/cloudflare"
+      version = "~> 2.0"
+    }
   }
+
   backend "gcs" {
     bucket      = "sync-terraform"
     prefix      = "terraform/state"
     credentials = "../terraform-service-account.json"
   }
+}
+
+provider "cloudflare" {
+  email   = ""
+  api_key = ""
+  account_id = ""
 }
 
 provider "google" {

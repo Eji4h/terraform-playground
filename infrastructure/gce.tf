@@ -18,4 +18,6 @@ resource "google_compute_instance" "vm_instance" {
       network_tier = "PREMIUM"
     }
   }
+
+  metadata_startup_script = "sudo apt-get install nginx -y; sudo service nginx start"
 }
